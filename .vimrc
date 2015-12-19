@@ -82,11 +82,15 @@ let g:syntastic_loc_list_height = 5
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='bubblegum'
 "
 
+let g:solarized_termcolors=256
 syntax enable
 set background=dark
-colorscheme Tomorrow-Night-Eighties
+" colorscheme Tomorrow-Night-Eighties
+colorscheme solarized
 
 set encoding=utf-8
 set fileencodings=utf-8,gbk
@@ -110,7 +114,7 @@ set splitright
 set pastetoggle=<Insert>
 
 set shiftwidth=4
-:let g:html_indent_inctags = "html,body,head,tbody" 
+:let g:html_indent_inctags = "html,body,head,tbody"
 
 " shortcuts
 " tab
