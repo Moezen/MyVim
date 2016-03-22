@@ -16,7 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'L9'
+" Plugin 'L9'
 " Common
 Plugin 'taglist.vim'
 Plugin 'The-NERD-Commenter'
@@ -24,12 +24,16 @@ Plugin 'indent-Guides'
 Plugin 'ctrlp.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/syntastic'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'bling/vim-airline'
 
 " Python
 Plugin 'django_templates.vim'
 Plugin 'hynek/vim-python-pep8-indent'
+
+" Lua
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-lua-ftplugin' " related vim-misc
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
