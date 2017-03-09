@@ -24,41 +24,24 @@ Plugin 'indent-Guides'
 Plugin 'ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'scrooloose/syntastic'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
-
-" HTML
-Plugin 'closetag.vim'
-
-" Python
-Plugin 'django_templates.vim'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'vim-flake8'
-
-" Lua
-Plugin 'xolox/vim-misc'
-" Plugin 'tbastos/vim-lua'
-Plugin 'WolfgangMehner/lua-support'
 
 " nginx
 Plugin 'nginx.vim'
 
 " markdown
-Plugin 'godlygeek/tabular'
+Plugin 'tabular'
 Plugin 'plasticboy/vim-markdown'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
-Plugin 'indenthtml.vim'
-
-" vim plugin of go
-Plugin 'fatih/vim-go'
 
 " themes
 Plugin 'sickill/vim-monokai'
@@ -115,19 +98,20 @@ let g:syntastic_python_flake8_exec = flake8_exec
 " airline {
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'bubblegum'
+let g:airline_theme = 'tomorrow'
 " }
 
 " flake8 {
 let g:flake8_ignore = "E402"
 " }
 
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
 syntax enable
+colorscheme Tomorrow-Night-Eighties
+" colorscheme solarized
 set background=dark
-" colorscheme Tomorrow-Night-Eighties
-colorscheme solarized
 
+set t_Co=256
 set encoding=utf-8
 set fileencodings=utf-8,gbk
 set fencs=utf-8,gbk
@@ -147,7 +131,7 @@ set mouse-=a
 set splitbelow
 set splitright
 
-set pastetoggle=π
+" set pastetoggle=
 
 set shiftwidth=4
 
@@ -179,17 +163,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 " auto strip whitespace
 map <C-s> 	:StripWhitespace<CR>
-
-" lua
-:let g:Lua_GlobalTemplateFile = '~/.vim/bundle/lua-support/lua-support/templates/Templates'
-:let g:Templates_PersonalizationFile = '~/.vim/bundle/lua-support/lua-support/template*'
-
-" HTML
-:let g:closetag_html_style=1
-autocmd Filetype html,jinja,htmldjango,xml,xsl source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
-
-" Jinja
-au BufNewFile,BufRead *.j2 set filetype=jinja
 
 " markdown
 let g:vim_markdown_folding_disabled = 1
