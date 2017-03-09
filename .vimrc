@@ -39,6 +39,9 @@ Plugin 'nginx.vim'
 Plugin 'tabular'
 Plugin 'plasticboy/vim-markdown'
 
+" cpp
+Plugin 'octol/vim-cpp-enhanced-highlight'
+
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -98,20 +101,19 @@ let g:syntastic_python_flake8_exec = flake8_exec
 " airline {
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'tomorrow'
+let g:airline_theme = 'badwolf'
 " }
 
 " flake8 {
 let g:flake8_ignore = "E402"
 " }
 
-" let g:solarized_termcolors=256
-syntax enable
-colorscheme Tomorrow-Night-Eighties
-" colorscheme solarized
-set background=dark
-
 set t_Co=256
+let g:solarized_termcolors=256
+syntax enable
+set background=dark
+colorscheme solarized
+
 set encoding=utf-8
 set fileencodings=utf-8,gbk
 set fencs=utf-8,gbk
@@ -131,7 +133,7 @@ set mouse-=a
 set splitbelow
 set splitright
 
-" set pastetoggle=
+set pastetoggle=<C-\\>
 
 set shiftwidth=4
 
@@ -146,8 +148,6 @@ inoremap <C-t>     <Esc>:tabnew<CR>
 
 nnoremap <S-H>     :tabpre<CR>
 nnoremap <S-L>     :tabne<CR>
-nnoremap <D-L>     :tabne<CR>
-nnoremap <D-l>     :tabne<CR>
 
 " window
 nnoremap <C-h>     <C-W>h<C-W><ESC>
